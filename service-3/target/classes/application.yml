@@ -1,0 +1,35 @@
+micronaut:
+  application:
+    name: service3
+  server:
+    port: 8091
+rabbitmq.uri: amqp://localhost:5672
+netty:
+  default:
+    allocator:
+      max-order: 3
+flyway:
+  datasources:
+    default:
+      enabled: true
+      clean-schema: true
+      url: ${PG_JDBC_URL:`jdbc:postgresql://127.0.0.1:5432/book-catalogue`}
+      user: ${PG_USERNAME:postgres}
+      password: ${PG_PASSWORD:secret}
+      schemas: mn
+      default-schema: mn
+datasources:
+  default:
+    url: ${PG_JDBC_URL:`jdbc:postgresql://127.0.0.1:5432/book-catalogue`}
+    username: ${PG_USERNAME:postgres}
+    password: ${PG_PASSWORD:secret}
+    driver-class-name: org.postgresql.Driver
+    schema-genenerate: NONE
+    dialect: POSTGRES
+jpa:
+  default:
+    packages-to-scan:
+      - "com.andpod.persistence"
+    properties:
+      hibernate:
+        show_sql: true

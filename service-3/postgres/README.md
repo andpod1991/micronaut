@@ -1,0 +1,1 @@
+docker run --name my-postgres -e POSTGRES_PASSWORD=secret -e POSTGRES_DB=book-catalogue -p 5432:5432 -d postgres:13.3-alpine
