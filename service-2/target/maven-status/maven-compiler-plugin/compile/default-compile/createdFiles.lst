@@ -1,8 +1,0 @@
-com\andpod\controller\BookController.class
-com\andpod\model\Book$BookBuilder.class
-com\andpod\controller\$BookController$Definition.class
-com\andpod\model\Book.class
-com\andpod\Application.class
-META-INF\micronaut\io.micronaut.inject.BeanDefinitionReference\com.andpod.controller.$BookController$Definition$Reference
-com\andpod\controller\$BookController$Definition$Exec.class
-com\andpod\controller\$BookController$Definition$Reference.class
