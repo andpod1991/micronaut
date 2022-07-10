@@ -16,5 +16,9 @@ public class ChannelPoolListener extends ChannelInitializer {
 
         channel.queueDeclare("catalogue", true, false, false, null);
         channel.queueBind("catalogue", "micronaut", "books.catalogue");
+
+        channel.queueDeclare("creation", true, false, false, null);
+        channel.queueBind("creation", "micronaut", "books.creation");
+
     }
 }

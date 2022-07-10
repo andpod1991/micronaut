@@ -1,0 +1,8 @@
+POST http://localhost:8080/books
+Content-Type: application/json
+
+{
+  "isbn": "345345645645645",
+  "author":  "Andrei Podar",
+  "name": "Cartea cartilor"
+}

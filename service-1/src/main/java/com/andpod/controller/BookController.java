@@ -3,8 +3,11 @@ package com.andpod.controller;
 import com.andpod.model.Book;
 import com.andpod.service.BookService;
 import io.micronaut.http.HttpResponse;
+import io.micronaut.http.MediaType;
+import io.micronaut.http.annotation.Body;
 import io.micronaut.http.annotation.Controller;
 import io.micronaut.http.annotation.Get;
+import io.micronaut.http.annotation.Post;
 import jakarta.inject.Inject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -34,5 +37,10 @@ public class BookController {
         else {
             return HttpResponse.notFound();
         }
+    }
+
+    @Post(consumes = MediaType.APPLICATION_JSON)
+    public void createBook(@Body Book book) {
+        bookService.createBook(book);
     }
 }

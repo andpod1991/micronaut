@@ -17,11 +17,13 @@ public class BookEntity {
     private String name;
     private String author;
 
+    public BookEntity() {
+
+    }
+
     public Integer getId() {
         return id;
     }
-
-    public BookEntity(){}
 
     public BookEntity( String isbn, String name, String author) {
         this.isbn = isbn;

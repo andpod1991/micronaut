@@ -13,7 +13,7 @@ import java.util.List;
 public interface BooksClient {
 
     @Post("/books")
-    Book addBook(@Body Book book);
+    void addBook(@Body Book book);
 
     @Get("/books")
     @Retryable(attempts = "3", delay = "2s")

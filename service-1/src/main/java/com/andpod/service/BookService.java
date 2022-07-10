@@ -20,8 +20,12 @@ public class BookService {
     }
 
     public List<Book> listAllBooks() {
-
         LOG.debug("Book Service -> List all books");
         return client.getAllBooks();
+    }
+
+    public void createBook(Book book) {
+        LOG.debug("Book Service -> Create book");
+        client.addBook(book);
     }
 }

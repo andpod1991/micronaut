@@ -6,7 +6,7 @@ import com.andpod.persistence.jpa.BookRepository;
 import io.micronaut.rabbitmq.annotation.Queue;
 import io.micronaut.rabbitmq.annotation.RabbitListener;
 
-import java.util.Arrays;
+
 import java.util.List;
 import java.util.stream.Collectors;
 
